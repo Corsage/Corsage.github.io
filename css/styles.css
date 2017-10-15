@@ -1,0 +1,52 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+
+  height:100%;
+  margin: 0;
+
+
+  background: #263238;
+  color: #ECEFF1;
+}
+
+mark {
+  background-color: transparent;
+}
+
+
+mark.response {
+  color: #D50000;
+}
+
+div.center {
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.typewriter {
+    letter-spacing: .15em;
+    white-space: nowrap;
+
+    overflow: hidden;
+    margin: 0 auto;
+
+
+    animation:
+      typing 5.5s steps(108, end);
+}
+
+.hide {
+  visibility: hidden;
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
