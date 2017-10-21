@@ -6,7 +6,11 @@ body {
   margin: 0;
 
 
-  background: #263238;
+  background-color: #263238;
+  background-image: url(../img/legacy.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+
   color: #ECEFF1;
 }
 
