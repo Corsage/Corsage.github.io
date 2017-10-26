@@ -1,36 +1,58 @@
-$(document).ready(function() {
-    console.log( "ready!" );
+/**
+ * @file main.js -- Start of the legacy project.
+ * @version 1.1
+ * @author Jay Chowdhary <jayc.chowdhary@gmail.com>
+ */
 
-    $('.detour').one('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', function() {
-        // Do something once!
-        console.log('yeet');
-        $('#virtualprotect').removeClass("hide");
-    });
+class Legacy {
+    constructor() {
+        this.detour = document.getElementById('init');
+        this.virtualProtect = document.getElementById('virtualprotect');
 
-    jQuery(function($, undefined) {
-        $('#virtualprotect').terminal(function(command) {
-            if (command !== '') {
-                try {
-                    var result = window.eval(command);
-                    if (result !== undefined) {
-                        this.echo(new String(result));
-                    }
-                } catch(e) {
-                    this.error(new String(e));
-                }
-            } else {
-               this.echo('');
+        /** Constants */
+        this.CORSAGE = 'corsage';
+    }
+
+    /** Command handler -- You should read this. */
+    handleCommand(query) {
+        console.log(`Client executed command: ${query}`);
+        switch (query) {
+            case '133 221 333 123 111':
+                console.log("Soon.");
+                break;
+        }
+    }
+
+    /** Build 'terminal' for inputs. */
+    secret() {
+        let self = this;
+
+        // User-input.
+        let client = document.createElement('textarea');
+        client.setAttribute('id', 'client');
+        client.setAttribute('rows', '1');
+
+        self.virtualProtect.appendChild(client);
+
+        client.addEventListener('keypress', function(e) {
+            // 'Enter' key.
+            if ((e.keyCode || e.which) === 13) {
+                self.handleCommand(this.value);
+                e.preventDefault();
+
+                this.value = "";
             }
-        }, {
-            greetings: 'Corsage::Initialize();',
-            name: 'Init',
-            height: 50,
-            prompt: 'corsage> '
-    });
-});
+        }, false);
 
-});
+        client.focus();
+    }
 
-function Hook() {
-    console.log("Called.");
+    hook() {
+        let self = this;
+
+        self.detour.addEventListener('animationend', function(e) {
+            self.secret();
+            self.virtualProtect.classList.remove('hide');
+        }, false);
+    }
 }

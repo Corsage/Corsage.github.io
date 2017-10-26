@@ -11,28 +11,22 @@
 
     <!-- Roboto Condensed Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-    <!-- Terminal -->
-    <link href="css/jquery.terminal-1.9.0.css" rel="stylesheet"/>
     <!-- Main -->
     <link href="css/styles.css?v=1.0" rel="stylesheet">
 
-    <!-- JQuery 3.2.1 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Terminal -->
-    <script src="js/jquery.terminal-1.9.0.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
 </head>
 
-<body onload="Hook();">
+<body onload="new Legacy().hook();">
     <div class="center">
         <center>
-            <p class="typewriter detour">
+            <p id="init" class="typewriter detour">
                 <q>I find myself in a world of <mark class="response">im</mark>possible architecture and <mark class="response">in</mark>explicable machines. I can<mark class="response">not</mark> fathom how it works.</q>
             </p>
 
             <br />
-            <div id="virtualprotect" class="terminal hide" style="height: 200px;">
+            <div id="virtualprotect" class="terminal hide"/>
         </center>
     </div>
 </body>

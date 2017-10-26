@@ -1,4 +1,5 @@
 /* Global Styles */
+
 body {
   font-family: 'Roboto Condensed', sans-serif;
 
@@ -14,15 +15,6 @@ body {
   color: #ECEFF1;
 }
 
-mark {
-  background-color: transparent;
-}
-
-
-mark.response {
-  color: #D50000;
-}
-
 div.center {
   min-height: 100vh;
   max-height: 100vh;
@@ -31,6 +23,21 @@ div.center {
   justify-content: center;
 }
 
+mark {
+  background-color: transparent;
+}
+
+/* Needs */
+
+.hide {
+  visibility: hidden;
+}
+
+mark.response {
+  color: #D50000;
+}
+
+/* Typewriter */
 
 .typewriter {
     letter-spacing: .15em;
@@ -44,13 +51,44 @@ div.center {
       typing 5.5s steps(108, end);
 }
 
-.hide {
-  visibility: hidden;
-}
-
-
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
 
+/* Terminal */
+
+.terminal {
+    height: 40px;
+    text-align: left !important;
+    background-color: #232E33;
+}
+
+#client {
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+
+    display: table-cell;
+    vertical-align: middle;
+
+    border: none;
+    overflow: auto;
+    outline: none;
+    resize: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14px;
+    line-height: 250%;
+
+    background-color: #232E33;
+    color: #ECEFF1;
+}
