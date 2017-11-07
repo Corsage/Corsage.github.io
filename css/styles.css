@@ -10,6 +10,7 @@ body {
   background-color: #263238;
   background-image: url(../img/legacy.svg);
   background-repeat: no-repeat;
+  background-size: contain;
   background-position: center center;
 
   color: #ECEFF1;
