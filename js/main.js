@@ -8,16 +8,13 @@ class Legacy {
     constructor() {
         this.detour = document.getElementById('init');
         this.virtualProtect = document.getElementById('virtualprotect');
-
-        /** Public commands that will be listed. */
-        this.publicCommandsList = ['HELP', 'ABOUT', 'PORTFOLIO', 'CONTACT', 'BLOG'];
     }
 
     generateHelp() {
         let self = this;
 
         let help = document.createElement('code');
-        help.innerHTML = 'Avaliable public commands: "about", "portfolio", "contact", "blog".';
+        help.innerHTML = 'Available public commands: "about", "portfolio", "contact", "blog".';
         self.virtualProtect.appendChild(help);
 
         window.setTimeout(function() {
@@ -34,7 +31,7 @@ class Legacy {
                 break;
 
             case '133 221 333 123 111':
-                window.location.assign("http://www.kusowiabu.pw");
+                window.location.assign('http://www.kusowiabu.pw');
                 break;
         }
     }
