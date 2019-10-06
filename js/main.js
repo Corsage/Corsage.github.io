@@ -13,13 +13,16 @@ class Legacy {
     generateHelp() {
         let self = this;
 
-        let help = document.createElement('code');
-        help.innerHTML = 'Available public commands: "about", "portfolio", "contact", "blog".';
-        self.virtualProtect.appendChild(help);
+        if (self.virtualProtect.childElementCount == 2) {
 
-        window.setTimeout(function() {
-            self.virtualProtect.removeChild(help);
-        }, 5000);
+            let help = document.createElement('code');
+            help.innerHTML = 'Available public commands: "about", "portfolio", "contact", "blog".';
+            self.virtualProtect.appendChild(help);
+
+            window.setTimeout(function() {
+                self.virtualProtect.removeChild(help);
+            }, 5000);
+        }
     }
 
     /** Command handler -- You should read this. */
