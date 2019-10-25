@@ -2,6 +2,7 @@
  * @file main.js -- Start of the legacy project.
  * @version 1.1
  * @author Jay Chowdhary <jayc.chowdhary@gmail.com>
+ * @author Sanjot Boyal <sboyal@hotmail.com>
  */
 
 class Legacy {
