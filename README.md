@@ -1,6 +1,6 @@
 # Corsage
 
-Slowly but surely.
+Slowly but surely. This project is on hiatus and will resume in 2020.
 
 
 ## Contributing
